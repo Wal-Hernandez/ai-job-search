@@ -44,7 +44,7 @@ Optional arguments:
 
 ### Step 1: Search
 
-Read `search-queries.md` (this directory) for the search strategy. By default, run the top 3 priority query categories. If the user said "broad", run all categories. If the user specified a focus area (e.g. "data science"), prioritize queries from that category.
+Read `search-queries.md` (this directory) for the search strategy. Queries are organized by geographic priority (Argentina → LATAM Remote → International Remote) and then by role priority. By default, run the top 3 geographic categories in order. If the user said "broad", run all categories across all geographies. If the user specified a focus area (e.g. "data science"), prioritize queries from that category across geographies while keeping the Argentina → LATAM → International order.
 
 **Use the installed CLI tools as the primary search mechanism.** Fall back to `WebSearch` only for portals that do not have a CLI skill, or if `bun` is unavailable on the system.
 
@@ -179,7 +179,7 @@ Scraper-based portal CLIs rot silently: when a portal changes its markup, the pa
 
 ### Step 5: Present Results
 
-Present new jobs in a table sorted by fit (high first). When Step 1b skipped
+Present new jobs in a table sorted by geography priority first (Argentina → LATAM Remote → International Remote), then by fit (high first), then by date (newest first). Use the `location` and `work_mode` fields, plus the country/region facets from the CLI result, to assign each job to a geography bucket. If a job's geography is ambiguous, assign it to the most permissive matching bucket (e.g. "Remote" with no country → International Remote). When Step 1b skipped
 portals (`enabled: false`), report them with the `skipped (disabled):` line below
 so opting one out stays visible rather than silent; omit the line when nothing
 was skipped. When Step 4.75 found a portal degraded, broken, or inconclusive,

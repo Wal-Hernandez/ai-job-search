@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Walter Hernandez
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. OpenCode acts as a career advisor and application assistant for Walter Hernandez, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,74 +10,85 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
-
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Walter Hernandez
+- **Location:** Argentina
+- **Languages:** Spanish (Native), English (B1 Intermediate - EF SET)
+- **CV language:** English
+- **Status:** Full Stack Developer SSR at La Nación (October 2024 - Present)
+- **LinkedIn headline:** "Full Stack Developer SSR | Backend-Focused | Node.js · .NET · AWS · Azure"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Seguridad Informática** (in progress) - Universidad Siglo 21
+- **Information Systems Engineering** (partial, reoriented) - National Technological University (UTN), 2021-2024
+- **Full Stack Web Development Bootcamp** - Henry, 2021-2022
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Full Stack Developer SSR** (October 2024 - Present) - **La Nación** (Argentina, hybrid)
+  - Backend-focused developer in a multidisciplinary team.
+  - Led technical migration of newsletter system from legacy .NET 2.2 to Node.js + AWS.
+  - Core contributor to Paywall system evolution.
+  - Technologies: Node.js, .NET, React, AWS, Azure DevOps, Responsys.
+
+- **Full Stack Software Developer** (July 2023 - October 2024) - **Eppical** (Argentina, remote)
+  - Maintained and evolved desktop and mobile applications.
+  - Led implementation of AI-powered image and PDF analysis features.
+  - Evolved architecture into separated frontend/backend/database layers.
+  - Technologies: Angular, JavaScript, C#, .NET, SQL Server, Azure.
+
+- **Full Stack Software Developer** (February 2021 - July 2023) - **SYNAgro** (Argentina)
+  - Designed interfaces, fixed anomalies, implemented database changes, designed email layouts.
+  - Technologies: React, JavaScript, TypeScript, C#, .NET, MongoDB, Ionic, Figma, Jira.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Node.js, TypeScript, C#, .NET, backend architecture, REST API design, SQL Server, AWS, Azure.
+- **Secondary:** React, Angular, MongoDB, PostgreSQL, Docker (learning), Kubernetes (learning).
+- **Domain:** Software architecture, SOLID principles, design patterns, legacy modernization, AI integration, distributed systems.
+- **Software:** Git, Azure DevOps, Git Flow, Responsys, Figma, Jira, Trello.
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+No formal certifications listed.
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+No publications listed.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+No awards listed.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- Analytical and problem-solving oriented.
+- Proactive proposing improvements when opportunities arise.
+- Works well autonomously and in team.
+- Values technical discussions, code reviews, and learning from different perspectives.
+- Prefers assuming technical ownership over people management.
+- Adapts to startups and large companies.
+- Enjoys multidisciplinary teams with collaboration across development, product, architecture, and business.
+- Motivated by learning new technologies and facing complex technical challenges.
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building robust, scalable, and maintainable software solutions.
+- Designing backend architectures and distributed systems.
+- Exploring Artificial Intelligence and Data Science applications.
+- Working in teams that value engineering quality and continuous learning.
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Artificial Intelligence
+- Data Science / Machine Learning
+- Cloud Computing
+- SaaS platforms
+- Cybersecurity
+- Fintech
+- Technology products
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Roles with no technical growth or learning opportunities.
+- Environments without collaboration or technical discussion.
+- Positions requiring extensive people management as a primary responsibility.
 
 ## Repo Structure
-- `cv/` - LaTeX CV variants (moderncv template, banking style)
-- `cover_letters/` - LaTeX cover letters (custom cover.cls template)
+- `cv/` - Master CV template and comprehensive reference (`main_example.tex`)
+- `cover_letters/` - Master cover letter template and resources (`cover_example.tex`, `cover.cls`, fonts)
+- `applications/` - One folder per job application, containing the posting, evaluation, tailored CV, cover letter, and interview notes
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job search CLI tools
 
@@ -90,8 +98,6 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 3. If good fit: create targeted CV (`cv/main_<company>_<role>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
-
-**Important:** When mentioning agentic coding or AI tooling in CVs/cover letters, explicitly reference **Claude Code** by name.
 
 ## Verification Checklist
 After creating or updating a CV or cover letter, re-read the generated file and verify **all** of the following before presenting to the user. Report the results as a pass/fail checklist.
@@ -128,11 +134,11 @@ Both documents MUST be compiled and visually inspected via the Read tool on the 
 - [ ] **CV is exactly 2 pages** - not 1, not 3
 - [ ] **No orphaned `\cventry` titles** - a job/education title must never sit at the bottom of a page with its bullets spilling to the next page. Use `\needspace{5\baselineskip}` before each `\cventry` to prevent this, and `\enlargethispage{2-3\baselineskip}` to rescue a trailing section that just barely spills
 - [ ] **Cover letter is exactly 1 page** - signature block must fit with the body, never overflow
-- [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
+- [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = \coverfontpath/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
 
 ### ATS & keyword verification (CV)
 ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `pdftotext -layout` and verify what a parser sees. `pdftotext` (poppler) is optional - if missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
 - [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but absent from the extraction
-- [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to ATS)
+- [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to an ATS)
 - [ ] Reading order of the extracted text matches the visual order (single-column stock template is safe; multi-column custom templates are where this breaks)
 - [ ] Posting keywords covered or honestly absent - synonym-only matches tightened to the posting's exact term where truthfully applicable, keywords the profile genuinely supports added to experience bullets, genuine gaps left visible and **never stuffed**

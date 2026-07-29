@@ -1,0 +1,32 @@
+# Add patterns to ignore here, one per line
+# Example:
+# *.log
+# tmp/
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.cache/
+
+.git/
+.vscode/
+.idea/
+
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+*.pdf
+*.zip
+
+*.log
+
+.env
+.env.*
+
+bin/
+obj/

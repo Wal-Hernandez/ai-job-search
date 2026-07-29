@@ -95,3 +95,7 @@ upskill/*.md
 
 # Brainstorm mockups (superpowers visual companion) - never ship
 .superpowers/
+
+# Per-application folders are tracked by default (see applications/README.md).
+# Compiled PDFs and LaTeX build artifacts remain ignored via the global
+# *.pdf / *.aux / *.log / *.out rules above.

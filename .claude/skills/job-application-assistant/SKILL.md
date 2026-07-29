@@ -26,22 +26,25 @@ When the user provides a job posting (URL or text), follow this workflow:
 - Ask the user if they want to proceed with an application
 
 ### Step 2: Tailor CV
-- Read the most relevant existing CV variant from `cv/` as a starting point
+- Read the most relevant existing CV variant from `cv/` or `applications/<company>-<role>/` as a starting point
 - Follow the guidelines in `05-cv-templates.md`
-- Create `cv/main_<company>_<role>.tex` with tailored content
+- Create `applications/<company>-<role>/cv.tex` with tailored content
 - Adjust: profile statement, skills section, experience bullet emphasis, section order
+- Compile with `lualatex` and verify exactly 2 pages
 
 ### Step 3: Write Cover Letter
 - Follow the writing style rules in `03-writing-style.md` (critical: no em-dashes, no cliches)
 - Follow the template structure in `06-cover-letter-templates.md`
-- Create `cover_letters/cover_<company>_<role>.tex`
+- Create `applications/<company>-<role>/cover-letter.tex`
 - Ensure the letter connects specific experience to the role requirements
+- Compile with `xelatex` from the repo root, with `TEXINPUTS` including `cover_letters//`, and verify exactly 1 page
 
 ### Step 4: Interview Preparation
 - Follow the framework in `07-interview-prep.md`
 - Prepare STAR-format answers for likely questions
 - Identify role-specific talking points
 - Draft questions the candidate should ask the interviewer
+- Write everything to `applications/<company>-<role>/interview-notes.md`
 
 ---
 

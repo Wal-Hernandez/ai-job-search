@@ -10,7 +10,7 @@ framework_version: 1.3.0
 
 All CVs use the moderncv LaTeX package with the "banking" style and "blue" color scheme.
 
-**Output file:** `cv/main_<company>_<role>.tex`
+**Output file:** `applications/<company>-<role>/cv.tex` (per-application folder convention). Keep the master reference CV at `cv/main_example.tex`.
 **Compile with:** **lualatex** on MiKTeX/TeX Live. pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors; lualatex handles the same sources cleanly.
 **Master reference:** `cv/main_example.tex` (comprehensive CV with all competencies, experience, and achievements - use as source when building targeted CVs)
 
@@ -43,18 +43,18 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Walter Hernandez - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.77]{geometry}
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\name{Walter}{Hernandez}
+\address{Argentina}{}{}
+\phone[mobile]{(+54) 11 2382-6514}
+\email{walskp@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/wal-hernandez-dev}{LinkedIn}, \href{https://github.com/Wal-Hernandez}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -116,11 +116,15 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Full Stack Developer SSR roles:**
+> Full Stack Developer SSR with strong backend orientation and 4+ years building scalable web applications across Angular, React, Node.js, and .NET ecosystems. Led the technical migration of a legacy .NET 2.2 newsletter system to a modern Node.js + AWS architecture at La Nación, and drove AI-powered image and PDF analysis features at Eppical. Comfortable owning backend architecture, API design, and cross-functional collaboration in remote or hybrid teams.
+
+**For Backend Developer SSR roles:**
+> Backend-focused Full Stack Developer SSR with deep hands-on experience in Node.js, TypeScript, C#, .NET, AWS, and Azure. Proven track record designing REST APIs, modernizing legacy systems, and applying SOLID principles and design patterns in production. Brings a systems-thinking mindset, technical ownership, and a collaborative approach to high-impact engineering teams.
+
+**For Backend / AI-adjacent roles:**
+> Full Stack Developer SSR transitioning toward AI and data engineering, combining 4+ years of backend development (Node.js, .NET, AWS) with hands-on experience integrating AI capabilities for document and image analysis. Strong foundation in software architecture, API design, and distributed systems; eager to contribute to teams building intelligent, scalable products.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

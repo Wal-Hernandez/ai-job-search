@@ -8,45 +8,32 @@ framework_version: 1.1.0
 
 ## Eligibility Gate — run before scoring
 
-If the candidate is not a citizen or permanent resident of the country they are applying in, run this first. It is a hard filter, not a scoring dimension, and it is separate from work-permit *timing*: timing asks "can they work the required hours yet?", eligibility asks "are they permitted to hold this job at all?". A candidate can pass timing and still be categorically excluded.
-
-Read the posting's eligibility / work rights / "who can apply" section **verbatim** and classify:
+Walter is based in Argentina and is open to remote, hybrid, and international opportunities. If a posting requires citizenship or permanent residency in a specific country, read the posting's eligibility section verbatim and classify. Silence on citizenship/residency is not permission; flag as unverified and proceed with caution.
 
 | Posting wording | Verdict |
 |-----------------|---------|
-| Names a **citizenship or permanent-residency requirement** ("must be a citizen of X", "permanent resident", "PR required", "full working rights" where the employer means citizen/PR) | **FAIL — hard stop.** Do not score, do not draft. Quote the exact wording back to the user. |
-| Requires a **security clearance** at any level | **FAIL** in most countries, since clearance is normally gated on citizenship. Verify the specific scheme rather than assuming. |
-| **Explicitly names** the candidate's permit class, or says "international applicants welcome", "visa holders considered", "we sponsor" | **PASS** — verified acceptance. Worth noting as a positive in the application. |
-| **Silent** on citizenship or residency | **PROCEED, but mark unverified.** Check the employer's own careers or international-applicant page before drafting. |
-
-**Two rules that are easy to get wrong:**
-
-1. **Silence is not permission.** Large graduate programs frequently gate eligibility on their own website rather than in the job ad. Highest-risk categories: professional-services firms, government and defence, banking, telecommunications, and anything touching critical infrastructure.
-2. **A company-wide "we accept international applicants" statement is not role-level permission.** The common pattern is a general welcome followed by a *named list* of the specific programs or service lines it covers. Confirm the **specific posting or stream** appears on that list before drafting.
-
-**Report an eligibility failure to the user with the quoted source** rather than silently dropping the role. They may know something about their own status that the profile does not record.
-
-If the candidate's permit also constrains *hours* or *start date* (a student visa with a term-time cap, a permit that begins on graduation), record that as a second gate under this section during `/setup`, with the specific dates. Do not merge it with the eligibility question above — they fail for different reasons and need different answers.
-
-A role that fails this gate is not scored and not drafted. Everything below applies only to roles that pass it.
+| Names a citizenship or permanent-residency requirement | FAIL — hard stop |
+| Requires a security clearance | FAIL in most countries |
+| Explicitly accepts Argentina / LATAM / international / remote / visa sponsorship | PASS |
+| Silent on citizenship or residency | PROCEED, but mark unverified |
 
 ## Scoring Dimensions
 
 Evaluate each job posting against these five dimensions:
 
 ### 1. Technical Skills Match (0-100)
-How well do the required/preferred skills align with the candidate's capabilities?
+How well do the required/preferred skills align with Walter's capabilities?
 
 | Score | Meaning |
 |-------|---------|
-| 80-100 | Core requirements are primary skills |
+| 80-100 | Core requirements are primary skills (Node.js, .NET, backend architecture, API design) |
 | 60-79 | Most requirements match, 1-2 gaps that are learnable |
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Node.js, TypeScript, C#, .NET, backend development, REST API design, SQL Server, MongoDB, AWS, Azure, React, Angular.
+**Moderate match areas:** Docker, Kubernetes, AI/ML integration, Python, data pipelines, distributed systems.
+**Weak match areas:** Advanced machine learning, data science, deep learning, specialized frontend-only roles.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -58,12 +45,12 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Full stack development, backend-focused roles, media/newsletter/paywall systems, legacy modernization, AI integration, API design, cloud infrastructure.
+**Moderate:** SaaS platforms, fintech, cybersecurity, data engineering roles.
+**Entry-level:** Pure data science, ML research, frontend-only roles.
 
 ### 3. Behavioral/Culture Fit (0-100)
-Does the role and company culture match the behavioral profile?
+Does the role and company culture match Walter's behavioral profile?
 
 | Score | Meaning |
 |-------|---------|
@@ -72,38 +59,38 @@ Does the role and company culture match the behavioral profile?
 | 40-59 | Some friction areas |
 | 0-39 | Significant culture mismatch |
 
-**Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
+**Red flags to research:** Heavy people-management requirements, siloed execution without collaboration, no technical discussion or code review culture, rigid tech stack without learning opportunities.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+- Remote from Argentina: PASS
+- Hybrid with LATAM office: PASS
+- Relocation required: FLAG (discuss with Walter)
+- Citizenship/visa barrier: FAIL
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
 
 | Score | Meaning |
 |-------|---------|
-| 80-100 | Strongly aligned with career direction, clear growth path |
+| 80-100 | Strongly aligned with backend architecture and AI/data growth path |
 | 60-79 | Good role but only partially aligned with long-term goals |
-| 40-59 | Decent job but doesn't build toward career goals |
+| 40-59 | Decent job but doesn't build toward AI/data direction |
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Short term: Full Stack Developer SSR or Backend Developer SSR with backend/architecture focus.
+- Medium term: Combine backend expertise with AI, ML, data engineering, and automation.
+- Long term: AI engineer / data engineer / backend architect solving complex problems.
 
-**Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+**Motivation filter:**
+- Tasks that energize: backend architecture, API design, legacy modernization, AI integration, technical discussions, code reviews, cross-functional collaboration, learning new technologies.
+- Tasks that drain: pure frontend-only execution, extensive people management, isolated work without technical feedback, maintenance without growth.
+- Non-task factors: learning culture, technical mentorship, autonomy, team quality, modern tooling.
 
-**Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+**Life situation alignment:**
+- **Security:** Currently employed at La Nación; can evaluate offers carefully.
+- **Flexibility:** Remote preferred; hybrid acceptable; open to international opportunities.
+- **Professional development:** Prioritizes roles with technical growth, AI/data exposure, and architecture opportunities.
 
 ### 6. Salary Benchmark (Optional)
 
@@ -114,18 +101,7 @@ python salary_lookup.py "<Company Name>" --json
 
 If a city is known from the posting, add `--city "<City>"` to narrow results.
 
-Present findings as:
-```
-### Salary Benchmark
-| Metric | Value |
-|--------|-------|
-| [Category] index | XX.X (+/-X.X% vs baseline) |
-| Overall index | XX.X (+/-X.X% vs baseline) |
-```
-
-Interpret results relative to the baseline defined in the data file's metadata. For index-based data, higher typically means above-market compensation.
-
-If the salary tool is not configured, skip this section.
+Walter has chosen not to set a fixed salary expectation in the profile. Present benchmarks as context, not as a target.
 
 ## Output Format
 
@@ -157,7 +133,7 @@ Present the evaluation as:
 
 ### Company Research Checklist
 - [ ] Checked company website (mission, values, recent news)
-- [ ] Checked review sites (Glassdoor, Jobindex, etc.)
+- [ ] Checked review sites (Glassdoor, LinkedIn, etc.)
 - [ ] Checked LinkedIn for team size, recent hires, connections
 - [ ] Checked media for restructuring, growth, or workplace issues
 - [ ] Identified network contacts who may know the team/manager
@@ -174,13 +150,13 @@ Present the evaluation as:
 ## Thresholds
 - **Strong Fit** (75+): Definitely apply, tailor everything
 - **Good Fit** (60-74): Apply, address gaps in cover letter
-- **Moderate Fit** (45-59): Consider carefully, discuss with user
+- **Moderate Fit** (45-59): Consider carefully, discuss with Walter
 - **Weak Fit** (30-44): Probably skip unless strategic reasons
 - **Poor Fit** (<30): Skip
 
 ## Pre-Application: Call the Employer (Best Practice)
 
-Before writing the application, consider whether the candidate should call the contact person listed in the posting. **Only call if there are substantive questions** - never call just to "be remembered."
+Before writing the application, consider whether Walter should call the contact person listed in the posting. Only call if there are substantive questions - never call just to "be remembered."
 
 ### When to Suggest Calling
 - The posting has unclear or ambiguous requirements
@@ -195,7 +171,7 @@ Before writing the application, consider whether the candidate should call the c
 - "What does success look like in the first 6-12 months?"
 
 ### Rules for the Call
-- Prepare a 30-second "elevator pitch" about your background in case they ask
-- The call's purpose is **gathering information**, not delivering a pitch
-- Take notes - use what you learn to tailor the application
-- Reference the conversation naturally in the cover letter ("After speaking with [name], I was especially drawn to...")
+- Prepare a 30-second elevator pitch about background
+- The call's purpose is gathering information, not delivering a pitch
+- Take notes and use what you learn to tailor the application
+- Reference the conversation naturally in the cover letter
