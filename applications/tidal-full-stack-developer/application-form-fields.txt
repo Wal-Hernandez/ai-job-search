@@ -1,0 +1,214 @@
+# Application Form Fields: Tidal — ARG Full-Stack Developer
+#
+# This file contains pre-filled answers for free-text form fields.
+# Fields labelled as AUTOFILL are factual data to copy into structured fields.
+#
+# NOTE TO SELF: These answers are for pasting into the form at
+# https://www.careers-page.com/hiretidal/job/63W6V89W/apply
+# Review before pasting — portal layouts may vary.
+
+# =============================================================================
+# UPLOAD FILES
+# =============================================================================
+#
+# Resume/CV:     cv.pdf (in this directory, 2 pages)
+# Attachment:    cover-letter.pdf (in this directory, 1 page) — optional but recommended
+#
+# NOTE TO SELF: The form may only allow one upload field. If "Resume" is the only
+# file upload, upload cv.pdf. The cover letter can be attached as an additional
+# file if the portal supports it, or included as a link/text field if asked.
+
+# =============================================================================
+# DATES QUICK REFERENCE
+# =============================================================================
+#
+# La Nación:       Oct 2024 – Present
+# Eppical:          Jul 2023 – Oct 2024
+# SYNAgro:          Feb 2021 – Jul 2023
+# Universidad Siglo 21: 2024 – Present
+# UTN:              2021 – 2024
+# Henry Bootcamp:   2021 – 2022
+
+# =============================================================================
+# PERSONAL DETAILS (AUTOFILL)
+# =============================================================================
+#
+# First Name:       Walter
+# Last Name:        Hernandez
+# Email:            walskp@gmail.com
+# Phone:            (+54) 11 2382-6514
+# Location:         Argentina
+# LinkedIn:         https://www.linkedin.com/in/wal-hernandez-dev
+# GitHub:           https://github.com/Wal-Hernandez
+
+# =============================================================================
+# SELF-INTRODUCTION / PERSONAL STATEMENT
+# =============================================================================
+#
+# Use this if the form asks for a "tell us about yourself" or "summary" field.
+# Word count: 92 words
+#
+# -- PASTE BELOW --
+# I am a Full-Stack Developer based in Argentina with five years of experience
+# building backend services, APIs and full-stack features for remote teams.
+# At La Nación I migrated a legacy .NET 2.2 newsletter system to Node.js and
+# AWS, designing the REST APIs, data models and serverless workflows. I now
+# contribute to the Paywall monorepo as a core developer, collaborating with
+# Architecture, Database and Frontend teams on business-critical features.
+# At Eppical I integrated OpenAI APIs into document-analysis workflows. I work
+# with ownership and take features from requirement clarification through
+# deployment.
+#
+# NOTE TO SELF: This self-introduction emphasizes backend/API ownership and
+# AI integration — the two strongest signals for this role. If the character
+# limit is tighter, cut the Eppical sentence. If it is looser, add: "I focus
+# on writing clean, maintainable code and apply SOLID principles and design
+# patterns in production."
+
+# =============================================================================
+# WORK EXPERIENCE (STRUCTURED ENTRIES)
+# =============================================================================
+#
+# If the form asks for individual work experience entries:
+
+# [Entry 1]
+# Position Name:    Full Stack Developer SSR
+# Employer:         La Nación
+# Start Date:       Oct 2024
+# End Date:         Present
+# Location:         Argentina
+# Description (100–150 words):
+#
+# -- PASTE BELOW --
+# I migrated a legacy .NET 2.2 newsletter system to Node.js + AWS, designing
+# REST APIs, data models and serverless workflows that replaced existing
+# backend pipelines. I now contribute to the Paywall monorepo as a core
+# developer, participating in technical refinement for complex tasks and
+# performing code reviews via Azure DevOps. I work directly with Product
+# Owners and business teams to clarify incomplete requirements, then split
+# large stories into concrete engineering tasks with Architecture, Database
+# and Frontend teams. I apply SOLID principles and design patterns
+# (Strategy, Factory, Repository, Dependency Injection) in production
+# backend code and API architecture.
+#
+# Short version (~60 words):
+# -- PASTE BELOW --
+# I migrated a legacy .NET 2.2 newsletter system to Node.js + AWS, designing
+# REST APIs and serverless workflows. I now contribute to the Paywall monorepo
+# as a core developer, refining complex tasks and performing code reviews
+# across Architecture, Database and Frontend teams.
+
+# [Entry 2]
+# Position Name:    Full Stack Software Developer
+# Employer:         Eppical
+# Start Date:       Jul 2023
+# End Date:         Oct 2024
+# Location:         Argentina (Remote)
+# Description:
+#
+# -- PASTE BELOW --
+# I built backend integrations for AI document-processing workflows, routing
+# documents through OpenAI APIs and processing analysis results in Node.js/.NET
+# services consumed by Angular frontends. I developed full-stack features
+# across Angular frontends and Node.js/.NET backends, including UI components,
+# API endpoints and database interactions. I refactored code to improve
+# maintainability and participated in technical discussions to evaluate
+# implementation trade-offs.
+#
+# Short version (~60 words):
+# -- PASTE BELOW --
+# I built AI document-processing integrations using OpenAI APIs in Node.js/.NET
+# services consumed by Angular frontends. I developed full-stack features
+# across Angular, Node.js and .NET, including API endpoints and database
+# interactions, and refactored code to improve maintainability.
+
+# [Entry 3]
+# Position Name:    Full Stack Developer
+# Employer:         SYNAgro
+# Start Date:       Feb 2021
+# End Date:         Jul 2023
+# Location:         Argentina
+# Description:
+#
+# -- PASTE BELOW --
+# I developed internal business applications for the agribusiness sector
+# across the full stack, building React and Ionic interfaces and implementing
+# C#/.NET backend services with SQL database changes. I built responsive web
+# and mobile interfaces with React, TypeScript and Ionic, fixed production
+# bugs and implemented customer-facing features such as email layouts.
+#
+# Short version (~60 words):
+# -- PASTE BELOW --
+# I developed internal business applications across React, Ionic and C#/.NET
+# backends with SQL databases. I built responsive web and mobile interfaces
+# with React, TypeScript and Ionic, and resolved production bugs for
+# customer-facing features.
+
+# =============================================================================
+# EDUCATION (STRUCTURED ENTRIES)
+# =============================================================================
+#
+# [Entry 1]
+# School:           Universidad Siglo 21
+# Degree:           Seguridad Informática (In Progress)
+# Specialization:   Infrastructure, security, modern technology foundations
+# Start Date:       2024
+# End Date:         Present
+# Location:         Argentina (Remote)
+
+# [Entry 2]
+# School:           National Technological University (UTN)
+# Degree:           Information Systems Engineering (Partial, Reoriented)
+# Specialization:   Mathematics, Logic, Data Structures, Algorithms, Software Engineering
+# Start Date:       2021
+# End Date:         2024
+# Location:         Argentina
+
+# [Entry 3]
+# School:           Henry
+# Degree:           Full Stack Web Development Bootcamp
+# Specialization:   1500+ hours of training, pair programming, individual and group projects
+# Start Date:       2021
+# End Date:         2022
+# Location:         Remote
+
+# =============================================================================
+# SALARY EXPECTATION
+# =============================================================================
+#
+# The posting lists $3,000–$6,000 USD/month.
+# NOTE TO SELF: Walter has chosen not to set a fixed salary expectation.
+# If forced to provide a number, consider $4,500 – $5,500 USD/month
+# (mid-to-upper range, justified by 5 years of full-stack experience and
+# AI integration track record). Do not enter a number below $3,000.
+
+# =============================================================================
+# YEARS OF EXPERIENCE (DROPDOWN)
+# =============================================================================
+#
+# Total professional experience: 5+ years (Feb 2021 – Present)
+# NOTE TO SELF: If the form asks for "years of freelancing/contractor
+# experience" specifically, this is 0. Answer honestly. Remote employee
+# experience is not the same as freelancing, and misrepresenting this
+# will be discovered during reference checks.
+
+# =============================================================================
+# ADDITIONAL SCREENING QUESTIONS (IF ASKED)
+# =============================================================================
+#
+# "Are you willing to work overlapping US business hours?"
+# -- ANSWER: Yes. Argentina is typically 1–2 hours ahead of US Eastern Time.
+#
+# "Are you available to work as an independent contractor?"
+# -- ANSWER: Yes.
+#
+# "Are you currently based in Argentina?"
+# -- ANSWER: Yes.
+#
+# "What is your notice period?"
+# -- ANSWER: Available to discuss. Currently employed; notice period can be
+#    negotiated. (NOTE TO SELF: Standard in Argentina is 15–30 days. Do not
+#    volunteer a number unless forced by a required field.)
+#
+# "English proficiency level?"
+# -- ANSWER: C1 Advanced.

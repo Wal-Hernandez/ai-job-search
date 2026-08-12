@@ -1,0 +1,17 @@
+I have decided to target C1 English for international opportunities.
+
+For this simulation, assume my English level is C1 and update only the master CV accordingly.
+
+Do not modify anything else in the master CV.
+
+Then rerun the exact same evaluation and /apply workflow for the same Tidal position using this updated assumption.
+
+At the end, compare both application results side by side and explain:
+
+- How the overall fit score changed.
+- Whether any ATS or recruiter-related concerns disappeared.
+- Whether the tailored CV changed beyond the English level.
+- Whether the recommendation to apply changed.
+- Whether English was actually the limiting factor or if other gaps are now the most important.
+
+This is a what-if simulation to understand the impact of improving my English level.

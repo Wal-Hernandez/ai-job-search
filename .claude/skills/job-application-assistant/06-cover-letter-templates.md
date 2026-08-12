@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.1
+framework_version: 1.0.2
 ---
 
 # Cover Letter Templates and Tailoring Guide
@@ -16,7 +16,7 @@ Cover letters use a custom LaTeX document class (`cover.cls`) with Lato/Raleway 
 
 ```bash
 cd <repo-root>
-$env:TEXINPUTS = '.;cover_letters//;'
+export TEXINPUTS='.;cover_letters//;'
 xelatex -interaction=nonstopmode applications/<company>-<role>/cover-letter.tex
 ```
 

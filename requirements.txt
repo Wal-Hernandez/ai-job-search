@@ -1,0 +1,13 @@
+# Python dependencies for the AI Job Search framework.
+# Install in a virtual environment:
+#   python3 -m venv .venv
+#   source .venv/bin/activate  # Linux/macOS
+#   .venv\Scripts\activate     # Windows
+#   pip install -r requirements.txt
+
+# Used by tools/lint_skills.py and the CI/test suite.
+pyyaml>=6.0
+
+# Optional: used by tools/convert_salary_excel.py for salary benchmarking.
+# If missing, the salary conversion step is skipped and the main workflow is unaffected.
+openpyxl>=3.1

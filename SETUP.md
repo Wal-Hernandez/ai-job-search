@@ -79,22 +79,9 @@ Quick smoke tests after setup:
 ```bash
 cd cv && lualatex -interaction=nonstopmode -halt-on-error main_example.tex && cd ..
 
-SMOKE_DIR="$(mktemp -d /tmp/ai-job-cover-smoke.XXXXXX)"
-cp -R cover_letters/cover.cls cover_letters/OpenFonts "$SMOKE_DIR/"
-cat >"$SMOKE_DIR/cover_smoke.tex" <<'EOF'
-\documentclass[]{cover}
-\begin{document}
-\namesection{Test}{Candidate}{test@example.com}
-\companyname{Example Company}
-\companyaddress{123 Hiring Street\\Example City}
-\currentdate{\today}
-\lettercontent{Dear Hiring Manager,}
-\lettercontent{This smoke test verifies that xelatex can load cover.cls and the bundled fonts.}
-\closing{Sincerely,}
-\signature{Test Candidate}
-\end{document}
-EOF
-(cd "$SMOKE_DIR" && xelatex -interaction=nonstopmode -halt-on-error cover_smoke.tex)
+# cover.cls resolves bundled fonts relative to the repo root, so compile from the repo root.
+TEXINPUTS='.;cover_letters//;' xelatex -interaction=nonstopmode -halt-on-error \
+  -output-directory=cover_letters cover_letters/cover_example.tex
 ```
 
 #### Windows: Basic MiKTeX
@@ -123,22 +110,9 @@ Quick smoke tests after setup (PowerShell):
 ```powershell
 Set-Location cv; lualatex -interaction=nonstopmode -halt-on-error main_example.tex; Set-Location ..
 
-$SmokeDir = New-Item -ItemType Directory -Path (Join-Path $env:TEMP "ai-job-cover-smoke-$(Get-Random)")
-Copy-Item cover_letters\cover.cls, cover_letters\OpenFonts -Destination $SmokeDir -Recurse
-@'
-\documentclass[]{cover}
-\begin{document}
-\namesection{Test}{Candidate}{test@example.com}
-\companyname{Example Company}
-\companyaddress{123 Hiring Street\\Example City}
-\currentdate{\today}
-\lettercontent{Dear Hiring Manager,}
-\lettercontent{This smoke test verifies that xelatex can load cover.cls and the bundled fonts.}
-\closing{Sincerely,}
-\signature{Test Candidate}
-\end{document}
-'@ | Set-Content (Join-Path $SmokeDir "cover_smoke.tex")
-Push-Location $SmokeDir; xelatex -interaction=nonstopmode -halt-on-error cover_smoke.tex; Pop-Location
+# cover.cls resolves bundled fonts relative to the repo root, so compile from the repo root.
+$env:TEXINPUTS = '.;cover_letters//;'
+xelatex -interaction=nonstopmode -halt-on-error -output-directory cover_letters cover_letters\cover_example.tex
 ```
 
 ### Optional: pdftotext (for the ATS check)
@@ -273,13 +247,18 @@ After `/apply` creates the LaTeX files:
 ```bash
 # Bash / zsh / Git Bash
 cd cv && lualatex main_<company>_<role>.tex && cd ..
-cd cover_letters && xelatex cover_<company>_<role>.tex && cd ..
+
+# cover.cls resolves bundled fonts relative to the repo root, so compile from the repo root.
+TEXINPUTS='.;cover_letters//;' xelatex -output-directory=cover_letters cover_letters/cover_<company>_<role>.tex
 ```
 
 ```powershell
 # PowerShell
 Set-Location cv; lualatex main_<company>_<role>.tex; Set-Location ..
-Set-Location cover_letters; xelatex cover_<company>_<role>.tex; Set-Location ..
+
+# cover.cls resolves bundled fonts relative to the repo root, so compile from the repo root.
+$env:TEXINPUTS = '.;cover_letters//;'
+xelatex -output-directory cover_letters cover_letters\cover_<company>_<role>.tex
 ```
 
 These commands apply to the stock templates (moderncv CV, `cover.cls` cover letter). If you'd rather use your own LaTeX template, run `/add-template` — it captures the template's compile engine, fonts, style rules, and page limit, test-compiles it, and wires it into `/apply`. See the "LaTeX templates" section in the README.
