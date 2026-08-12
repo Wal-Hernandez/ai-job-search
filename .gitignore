@@ -96,6 +96,19 @@ upskill/*.md
 # Brainstorm mockups (superpowers visual companion) - never ship
 .superpowers/
 
-# Per-application folders are tracked by default (see applications/README.md).
-# Compiled PDFs and LaTeX build artifacts remain ignored via the global
-# *.pdf / *.aux / *.log / *.out rules above.
+# Applications contains personal data (CVs, cover letters, interview notes, salary
+# expectations, screening answers). Do not commit any application content.
+# Only the README and .gitkeep markers are allowed.
+applications/*
+!applications/README.md
+!applications/**/.gitkeep
+applications/**/job-posting.md
+applications/**/cv.tex
+applications/**/cover-letter.tex
+applications/**/evaluation.md
+applications/**/interview-notes.md
+applications/**/application-form-fields.txt
+applications/**/*.pdf
+applications/**/*.aux
+applications/**/*.log
+applications/**/*.out
